@@ -1,9 +1,0 @@
-package br.com.fiap.teste;
-
-public class TesteJPA_RELACIONAMENTO {
-	
-	public static void main(String[] args) {
-		
-	}
-
-}

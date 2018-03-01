@@ -1219,3 +1219,13 @@
 2018-02-28 11:55:55,651 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\yama\05-JPA-API\src\main\resources
 2018-02-28 11:55:55,651 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-02-28 11:55:55,651 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\yama\05-JPA-API\src\test\resources
+2018-03-01 19:03:25,101 [Worker-15] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: 05-JPA-API:05-JPA-API:0.0.1-SNAPSHOT @ C:\Users\Lucas\Desktop\Nova pasta (2)\05-JPA-API\pom.xml.
+2018-03-01 19:03:26,358 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 19:03:26,373 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Lucas\Desktop\Nova pasta (2)\05-JPA-API\src\main\resources
+2018-03-01 19:03:26,373 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 19:03:26,373 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Lucas\Desktop\Nova pasta (2)\05-JPA-API\src\test\resources
+2018-03-01 19:03:27,559 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: 05-JPA-API:05-JPA-API:0.0.1-SNAPSHOT @ C:\Users\Lucas\Desktop\Nova pasta (2)\05-JPA-API\pom.xml.
+2018-03-01 19:03:30,371 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 19:03:30,371 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Lucas\Desktop\Nova pasta (2)\05-JPA-API\src\main\resources
+2018-03-01 19:03:30,387 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 19:03:30,387 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Lucas\Desktop\Nova pasta (2)\05-JPA-API\src\test\resources
