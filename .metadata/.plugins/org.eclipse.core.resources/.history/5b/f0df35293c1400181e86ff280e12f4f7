@@ -1,0 +1,24 @@
+package br.com.fiap.teste;
+
+public class Comandos {
+	
+
+/*
+ *  persist() = insert
+
+	find() = select
+
+	merge() = update
+
+	remove() = delete
+	
+ */
+	
+	
+	/* Estados 
+	 * 
+	 * [ Transaction ] - A aplicação sempre começa no estado transaction = Quando você da new em um objeto e preenche as informações
+	 *  e precisamos transformar esse metodo em maneger , chamando o metodo persiste
+	 */
+
+}

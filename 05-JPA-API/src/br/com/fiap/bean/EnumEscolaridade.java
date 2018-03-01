@@ -1,0 +1,7 @@
+package br.com.fiap.bean;
+
+public enum EnumEscolaridade {
+
+	//ELE PEGA POR UM ARRAY[] , ENTÃO ELE ENTENDE POR POSIÇÃO
+	ENSINO_FUNDAMENTAL , ENSINO_MEDIO , ENSINO_SUPERIOR , DOUTORADO , MESTRADO , FIAPEIRO
+}

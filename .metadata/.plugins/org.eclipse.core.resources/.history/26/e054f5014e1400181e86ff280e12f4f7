@@ -1,0 +1,18 @@
+package br.com.fiap.relacionamentos;
+
+import br.com.fiap.financias.bean.Categoria;
+
+public class Teste_Relacionamento_Categoria {
+	
+	public static void main(String[] args) {
+		
+		Categoria cat = new Categoria();
+		cat.setNome("Viagem");
+		
+		Categoria cat2 = new Categoria();
+		cat2.setNome("Negoicos");
+		
+		
+	}
+
+}

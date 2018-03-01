@@ -1,0 +1,79 @@
+package br.com.fiap.financias.bean;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Conta {
+	
+	/*
+	 * @Entity indica que objetos dessa classe se tornem "persistível" no banco de dados. 
+	 * @Id indica que o atributo id é nossa chave primária (você precisa ter uma chave primária em toda entidade)
+	 * @GeneratedValue diz que queremos que esta chave seja populada pelo banco (isto é, que seja usado um auto increment ou sequence, dependendo do banco de dados). 
+	 * @Temporal configuramos como mapear um Calendar para o banco, aqui usamos apenas a data (sem hora), mas poderíamos ter usado apenas a hora 
+	 * (TemporalType.TIME) ou timestamp (TemporalType.TIMESTAMP). Essas anotações 
+	 */
+	
+	
+	@Id // Indica chave primaria
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	
+	private int id;
+	private String titular;
+	private String numero;
+	private String banco;
+	private String agencia;
+	
+	public Conta(){
+		
+	}
+	
+	
+	public Conta(int id, String titular, String numero, String banco, String agencia) {
+		super();
+		setId(id);
+		setTitular(titular);
+		setNumero(numero);
+		setBanco(banco);
+		setAgencia(agencia);
+	}
+
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getTitular() {
+		return titular;
+	}
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	public String getBanco() {
+		return banco;
+	}
+	public void setBanco(String banco) {
+		this.banco = banco;
+	}
+	public String getAgencia() {
+		return agencia;
+	}
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
+	
+	
+	
+	
+	
+}

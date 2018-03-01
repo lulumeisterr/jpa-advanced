@@ -1,0 +1,46 @@
+package br.com.fiap.dao.impl;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.fiap.bean.Funcionario;
+import br.com.fiap.jpa.dao.FuncionarioDAO;
+
+public class FuncionarioDAOImpl implements FuncionarioDAO{
+	
+	private static EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("oracle");
+	
+	public EntityManager conexao(){
+		return fabrica.createEntityManager();
+	}
+
+	
+	
+	@Override
+	public void gravar(Funcionario f) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void apagar(int codigo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void atualizar(Funcionario f) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Funcionario buscar(int codigo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

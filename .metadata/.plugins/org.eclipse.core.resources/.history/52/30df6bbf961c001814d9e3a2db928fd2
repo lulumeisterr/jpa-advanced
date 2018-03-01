@@ -1,0 +1,19 @@
+package br.com.fiap.jpa.dao;
+
+import br.com.fiap.bean.Funcionario;
+
+public interface FuncionarioDAO {
+
+	//Assinatura dos metodos
+	
+	void gravar(Funcionario f);
+	
+	void apagar(int codigo);
+	
+	void atualizar(Funcionario f);
+	
+	void commit();
+	
+	Funcionario buscar(int codigo);
+	
+}

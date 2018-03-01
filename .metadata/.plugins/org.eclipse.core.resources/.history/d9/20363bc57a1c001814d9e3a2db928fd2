@@ -1,0 +1,17 @@
+package br.com.fiap.teste;
+
+import javax.persistence.EntityManager;
+
+import br.com.fiap.fabricaConnection.JPAUtil;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		EntityManager fabrica =  new JPAUtil().getEntityManager();
+		
+		
+		
+	}
+	
+}

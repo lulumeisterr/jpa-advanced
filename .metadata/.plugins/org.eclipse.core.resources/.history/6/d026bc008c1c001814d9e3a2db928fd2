@@ -1,0 +1,8 @@
+package br.com.fiap.teste;
+
+public class Excluindo {
+
+	public static void main(String[] args) {
+		
+	}
+}

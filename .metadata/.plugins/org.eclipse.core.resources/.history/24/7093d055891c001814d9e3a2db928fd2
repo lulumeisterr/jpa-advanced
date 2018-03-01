@@ -1,0 +1,37 @@
+package br.com.fiap.teste;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.fiap.bean.EnumEscolaridade;
+import br.com.fiap.bean.Funcionario;
+
+public class CadastroTeste {
+
+		public static void main(String[] args) {
+			
+			EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("oracle");
+			EntityManager em = fabrica.createEntityManager();
+			
+			Funcionario f = new Funcionario("Lucas" , 
+											new GregorianCalendar(2017,Calendar.FEBRUARY,30) , 
+											Calendar.getInstance(), 
+											25000 , 
+											null ,
+											EnumEscolaridade.ENSINO_SUPERIOR);
+			
+			
+			em.getTransaction();
+	
+			
+			em.getTransaction().begin();
+			
+			em.close();
+			
+			
+		}
+}

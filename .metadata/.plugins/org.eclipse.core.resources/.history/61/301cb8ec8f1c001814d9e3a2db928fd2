@@ -1,0 +1,45 @@
+package br.com.fiap.teste;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.fiap.bean.Funcionario;
+
+public class AtualizandoComRefresh {
+
+	public static void main(String[] args) {
+		
+		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("oracle");
+		EntityManager em = fabrica.createEntityManager();
+		
+		Funcionario f = em.find(Funcionario.class, 1);
+		
+		//f.setVl_salario(9000);
+		
+		Funcionario f2 = new Funcionario(f.getNm_funcionario(), 
+				 f.getDt_admissao(), 
+				 f.getDt_nascimento(), 
+				 1000, 
+				 f.getFoto(), 
+				 f.getDs_escolaridade());
+				
+				 f2.setCdfuncionario(f.getCdfuncionario());
+				
+				 //Atualizando funcionario
+				 em.refresh(f2);
+		
+		em.getTransaction().begin();
+		
+		em.refresh(f);
+		
+		em.getTransaction().commit();
+		
+		System.out.println(f.getNm_funcionario());
+		System.out.println(f.getVl_salario());
+		
+		em.close();
+		fabrica.close();
+	}
+	
+}

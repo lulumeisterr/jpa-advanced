@@ -1,0 +1,24 @@
+package br.com.fiap.jpa.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Veiculo implements Serializable{
+	
+	private static final long serialVersionUID = 5404639528857101136L;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	
+	private int id;
+	private String cor;
+	private String modelo;
+	private String ano;
+	
+	
+
+}

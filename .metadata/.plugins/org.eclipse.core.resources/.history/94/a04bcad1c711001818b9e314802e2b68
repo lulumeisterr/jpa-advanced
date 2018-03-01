@@ -1,0 +1,5 @@
+package br.com.fiap.bean.financias;
+
+public class Conta {
+
+}

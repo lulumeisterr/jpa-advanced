@@ -1,0 +1,17 @@
+package br.com.fiap.bean;
+
+import java.util.Calendar;
+
+import br.com.fiap.constantes.bean.tipoSexo;
+
+public class Autor {
+
+	private int id;
+	private String nome;
+	private tipoSexo tipo;
+	private String sobrenome;
+	private Calendar data;
+	
+																						
+	
+}

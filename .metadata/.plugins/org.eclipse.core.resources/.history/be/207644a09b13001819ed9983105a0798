@@ -1,0 +1,24 @@
+package br.com.fiap.financias.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.financias.bean.Conta;
+
+public class PopularConta {
+
+	public static void main(String[] args) {
+		
+		
+		List<Conta> lista = new ArrayList<>();
+		Conta c = new Conta();
+		
+		c.setTitular("LuaN");
+		c.setAgencia("104");
+		c.setNumero("2");
+		c.setBanco("Banco Itau");
+		
+		
+	}
+	
+}

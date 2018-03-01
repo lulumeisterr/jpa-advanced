@@ -1,0 +1,27 @@
+package br.com.fiap.factory;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class JPAUtil {
+	
+	/*
+	 * Gerenciador de entidades e estados de objetos
+	 */
+	
+	
+	//financias é o nome da persistence-unit , Para cada classe 
+	private static EntityManagerFactory em = Persistence.createEntityManagerFactory("exercicio");
+	
+	
+	public EntityManager criarObjetoEstados(){
+		return em.createEntityManager();
+		
+ //O método createEntityManagerFactory irá gerar um EntityManagerFactory baseado nas configurações do persistence.xml
+		
+		
+	}
+	
+}
+				

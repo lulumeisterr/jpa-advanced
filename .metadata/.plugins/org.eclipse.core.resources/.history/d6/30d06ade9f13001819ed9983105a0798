@@ -1,0 +1,51 @@
+package br.com.fiap.financias.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import br.com.fiap.financias.bean.Conta;
+
+public class PopularConta {
+
+	public static void main(String[] args) {
+
+		EntityManager em = new JPAUtil().getEntityManager();
+
+		for (int i = 0; i < 1; i++) {
+
+			em.getTransaction().begin();
+
+			Conta c = new Conta();
+
+			c.setTitular("Luska");
+			c.setAgencia("90");
+			c.setNumero("3");
+			c.setBanco("Banco Itau");
+			em.persist(c);
+			
+			Conta c1 = new Conta();
+			
+			c1.setTitular("Maria");
+			c1.setAgencia("1");
+			c1.setNumero("3");
+			c1.setBanco("Banco Bradesco");
+			em.persist(c1);
+			
+			em.getTransaction().commit();
+
+		}
+
+		em.close();
+
+
+	}
+
+
+
+
+
+}
+
+

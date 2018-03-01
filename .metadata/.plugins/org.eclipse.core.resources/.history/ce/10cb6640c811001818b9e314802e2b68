@@ -1,0 +1,11 @@
+package br.com.fiap.bean.financias;
+
+import javax.persistence.Entity;
+
+public class Conta {
+
+	@Entity
+	
+	
+	
+}

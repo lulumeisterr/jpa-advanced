@@ -1,0 +1,17 @@
+package br.com.fiap.teste;
+
+public class Comandos {
+	
+
+/*
+ *  persist() = insert
+
+	find() = select
+
+	merge() = update
+
+	remove() = delete
+	
+ */
+
+}

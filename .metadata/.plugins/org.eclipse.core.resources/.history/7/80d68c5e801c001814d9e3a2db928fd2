@@ -1,0 +1,52 @@
+package br.com.fiap.bean;
+
+import java.io.Serializable;
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name = "T_FUNCIONARIO")
+@SequenceGenerator(name="T_FUNCIONARIO" , sequenceName = "SQ_TB_FUNCIONARIO" , allocationSize=1)
+
+public class Funcionario implements Serializable {
+	
+	private static final long serialVersionUID = 7781545238999436062L;
+	
+	@GeneratedValue(generator="sequencia" ,  strategy = GenerationType.IDENTITY)
+	@Id
+	
+	@Column(name = "cd_funcionario")
+	private int cdfuncionario;
+	
+	@Column(name = "nm_funcionario" , nullable = false , length = 100)
+	private String nm_funcionario;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name = "dt_admissao" , nullable = false)
+	private Calendar dt_admissao;
+	
+	@Column(name = "vl_salario")
+	private double vl_salario;
+	
+	@Lob
+	@Column(name = "ft_foto")
+	private byte[] foto;
+	
+	@Enumerated(EnumType.STRING)
+	private EnumEscolaridade ds_escolaridade;
+	
+	
+	
+}
