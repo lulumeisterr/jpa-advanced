@@ -1,0 +1,11 @@
+package br.com.fiap.teste;
+
+import br.com.fiap.bean.Cidade;
+
+public class TesteAnnotation {
+	public static void main(String[] args) {
+		
+		Cidade c = new Cidade();
+		
+	}
+}

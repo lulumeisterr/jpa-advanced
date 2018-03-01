@@ -1,0 +1,6 @@
+package br.com.fiap.annotation;
+
+public @interface Coluna {
+	String nome();
+	
+}

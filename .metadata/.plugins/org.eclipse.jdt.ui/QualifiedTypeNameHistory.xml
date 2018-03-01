@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.persistence.Entity"/>
-<fullyQualifiedTypeName name="javax.persistence.Id"/>
-<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="br.com.fiap.dao.PessoaDAO"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
-<fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
-<fullyQualifiedTypeName name="javax.persistence.Table"/>
-<fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
-<fullyQualifiedTypeName name="javax.persistence.Transient"/>
-<fullyQualifiedTypeName name="javax.persistence.Temporal"/>
-<fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
-<fullyQualifiedTypeName name="javax.persistence.Lob"/>
-<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="br.com.fiap.teste.DataTeste"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="br.com.fiap.bean.Conta"/>
+<fullyQualifiedTypeName name="br.com.fiap.bean.ContaInvestimento"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.com.fiap.bean.ContaPoupanca"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="br.com.fiap.bean.ContaCorrente"/>
+<fullyQualifiedTypeName name="br.com.fiap.bean.TipoConta"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Retention"/>
+<fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="br.com.fiap.annotation.Coluna"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Target"/>
+<fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
+<fullyQualifiedTypeName name="br.com.fiap.bean.Cidade"/>
+<fullyQualifiedTypeName name="br.com.fiap.annotation.Tabela"/>
 </qualifiedTypeNameHistroy>
