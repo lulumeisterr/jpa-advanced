@@ -1180,3 +1180,7 @@
 2018-03-07 11:25:27,082 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\AAA\ExerciseJPA\src\main\resources
 2018-03-07 11:25:27,082 [Worker-96] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-03-07 11:25:27,082 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\AAA\ExerciseJPA\src\test\resources
+2018-03-07 11:31:18,443 [Worker-96] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-07 11:31:18,443 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\AAA\ExerciseJPA\src\main\resources
+2018-03-07 11:31:18,443 [Worker-96] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-07 11:31:18,443 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\AAA\ExerciseJPA\src\test\resources
