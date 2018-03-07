@@ -1,0 +1,18 @@
+package br.com.fiap.teste.veiculo;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class VeiculoTeste{
+
+	public static void main(String[] args) throws Exception {
+	
+		EntityManagerFactory f = Persistence.createEntityManagerFactory("exercicio");
+		EntityManager em = f.createEntityManager();
+		
+		
+	}
+
+	
+}

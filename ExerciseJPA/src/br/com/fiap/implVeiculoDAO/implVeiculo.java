@@ -10,6 +10,13 @@ public class implVeiculo implements VeiculoDAO{
 
 	private EntityManager em;
 
+	
+	
+	public implVeiculo(EntityManager em) {
+		super();
+		this.em = em;
+	}
+
 	@Override
 	public void gravar(Veiculo v) {
 		em.persist(v);
