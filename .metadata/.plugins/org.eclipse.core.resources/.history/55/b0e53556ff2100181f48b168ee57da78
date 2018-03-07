@@ -1,0 +1,39 @@
+package br.com.fiap.testeDepartamento;
+
+
+import java.util.ArrayList;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.fiap.bean.Departamento;
+import br.com.fiap.dao.impl.DepartamentoDAOImpl;
+import br.com.fiap.jpa.dao.DepartamentoDAO;
+
+public class TestAllDaoDepartamento {
+
+	public static void main(String[] args) {
+	
+		
+		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("oracle");
+		EntityManager em = fabrica.createEntityManager();
+		
+		DepartamentoDAO dao = new DepartamentoDAOImpl(em);
+		
+		
+		Departamento d = new Departamento(1 , "Lucas");
+
+		//Cadastrar
+		dao.Cadastrar(d);
+		//Buscar
+		dao.buscar(1);
+		//Atualizar
+		dao.Atualizar(d);
+		//Remover
+		
+		em.close();
+		fabrica.close();
+	}
+
+}

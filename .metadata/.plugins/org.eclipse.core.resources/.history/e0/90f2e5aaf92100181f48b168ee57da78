@@ -1,0 +1,13 @@
+package br.com.fiap.bean;
+
+import java.io.Serializable;
+
+public class Departamento implements Serializable{
+
+	private static final long serialVersionUID = 3306294707921634198L;
+	
+	
+	
+	
+
+}
