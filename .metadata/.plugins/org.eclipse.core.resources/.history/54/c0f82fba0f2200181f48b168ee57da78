@@ -21,10 +21,8 @@ public class GenericDAOImpl<Tabela , Chave> implements GenericDAO<Tabela, Chave>
 		super();
 		this.em = em;
 		
-		//Recuperando a Classe    
-		
+		//Recuperando a Classe                                       
 		clazz = (Class<Tabela>) ((ParameterizedType) 
-				
 				                                 //Devolve os parametros da classe
 				getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
