@@ -1,0 +1,35 @@
+package br.com.fiap.jpa.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "T_NOTA_FISCAL")
+@SequenceGenerator(name="nota" , allocationSize = 1 , sequenceName="SQ_NOTA_FISCAL")
+public class NotaFiscal {
+	
+	@GeneratedValue(generator="nota" , strategy = GenerationType.SEQUENCE)
+	@Id
+	@Column(name = "cd_codigo")
+	private int codigo;
+	@Column(name = "vl_fiscal" , nullable = false)
+	private double valor;
+	@Column(name = "nr_serie" , nullable = false , length=255)
+	private String numeroSerie;
+	
+	public NotaFiscal(int codigo, double valor, String numeroSerie) {
+		super();
+		this.codigo = codigo;
+		this.valor = valor;
+		this.numeroSerie = numeroSerie;
+	}
+	
+	
+	
+
+}

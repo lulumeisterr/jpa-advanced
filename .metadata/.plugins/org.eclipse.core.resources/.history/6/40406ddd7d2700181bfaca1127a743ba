@@ -1,0 +1,29 @@
+package br.com.fiap.teste;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+
+import br.com.fiap.bean.Aluno;
+import br.com.fiap.dao.impl.AlunoDAOimpl;
+
+public class Teste {
+
+	public static void main(String[] args) {
+
+		
+		Aluno a = new AlunoDAOimpl(em)
+		
+		//Cadastrar
+
+		
+		//Buscar
+		
+		
+		//Atualizars
+		
+		
+		//Remover
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+unidirecional - Onde minha tabela tem meu atributo FK , mapeamento apenas de um lado
+
+EX: private Aluno aluno
+
+Um curso pode ter muitos alunos , então a pk de curso vai estar em aluno , gerando um atributo a mais
+e no java vc precisará ter esse atributo.
+
+Bidirecional - A FK fica nas duas classes
+
+-------------------------------------------------------------------------------------------------------------------------------
+mappedBy para nao mapear nas duas tabelas com a mesma FK
+
+CASCADE - Quando eu cadastrar 1 ele ja automaticamente cadastra o outro
+
+Cadastrar
+att
+buscar
+remover
+
+em cascata
+--------------------------------------------------------------------------------------------------------------------------------
+
+FETCH - Ele faz o join automatico e ja busca as informaçoes 
+
+Lazy - Adia o carregamento , EX : So vai exibir as informacoes da outra tabela se for solicitado
+Eager - Quando eu busco o pai ele ja busca as filhas

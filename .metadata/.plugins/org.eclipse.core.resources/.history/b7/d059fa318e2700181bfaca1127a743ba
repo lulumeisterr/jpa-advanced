@@ -1,0 +1,41 @@
+package br.com.fiap.teste;
+
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import br.com.fiap.dao.impl.PedidoDAO_impl;
+import br.com.fiap.jpa.DAOtwo.Pedido_DAO;
+import br.com.fiap.jpa.entity.NotaFiscal;
+import br.com.fiap.jpa.entity.Pedido;
+import br.com.fiap.jpa.excecao.CommitException;
+import br.com.fiap.singleton.EntityManagerFactorySingleton;
+
+public class TesteRelacionamento {
+
+	public static void main(String[] args) {
+		
+		
+		EntityManagerFactory fabrica = EntityManagerFactorySingleton.getInstance();
+		EntityManager em  = fabrica.createEntityManager();
+		// Cadastrar
+		
+		Pedido_DAO pDAO = new PedidoDAO_impl(em);
+		
+		Pedido p = new Pedido("Camiseta", GregorianCalendar.getInstance(), new NotaFiscal(255 , "40028922"));
+		
+		try{
+		pDAO.gravar(p);
+		pDAO.commit();
+		}catch(CommitException e){
+			System.err.println(e);
+		}
+		
+		em.close();
+		fabrica.close();
+		
+	}
+	
+}

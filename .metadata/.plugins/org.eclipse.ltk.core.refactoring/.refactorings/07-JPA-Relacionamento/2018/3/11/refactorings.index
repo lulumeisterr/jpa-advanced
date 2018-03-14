@@ -1,0 +1,8 @@
+1521033701008	Encapsulate field 'nota'
+1521034076251	Move package
+1521034375817	Rename type 'CursoDAOimpl'
+1521034383989	Rename compilation unit 'AlunoDAOimpl.java'
+1521034391035	Rename type 'NotaFiscal_impl'
+1521034541834	Delete element
+1521037858652	Encapsulate field 'pedido'
+1521038499407	Encapsulate field 'itens'

@@ -1,0 +1,7 @@
+package br.com.fiap.jpa.DAOtwo;
+
+import br.com.fiap.jpa.dao.GenericDAO;
+
+public interface Pedido_DAO extends GenericDAO<Pedido, Integer>{
+
+}

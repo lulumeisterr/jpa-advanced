@@ -1,0 +1,18 @@
+package br.com.fiap.teste;
+
+public class TesteBusca {
+	
+	public static void main(String[] args) {
+		
+		// Buscar o pedido
+		
+		
+		
+		// Exibir a descrição do pedido
+		
+		
+		// Exibir o valor da nota fiscal
+		
+	}
+	
+}

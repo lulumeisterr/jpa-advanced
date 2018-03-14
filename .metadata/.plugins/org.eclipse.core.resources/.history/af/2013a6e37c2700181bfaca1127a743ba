@@ -1,0 +1,5 @@
+ackage br.com.fiap.jpa.DAOtwo;
+
+public class AlunoDAO {
+
+}

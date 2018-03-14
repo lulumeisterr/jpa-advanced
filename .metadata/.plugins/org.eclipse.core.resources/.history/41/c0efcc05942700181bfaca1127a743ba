@@ -1,0 +1,20 @@
+package br.com.fiap.jpa.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "T_ITEM_PEDIDO")
+public class ItemPedido {
+	
+	@Id
+	@Column(name = "cd_Item")
+	private int codigo;
+	
+	
+	private double valor;
+	private int quantidade;
+
+}

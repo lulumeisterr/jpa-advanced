@@ -1,0 +1,8 @@
+package br.com.fiap.jpa.DAOtwo;
+
+import br.com.fiap.bean.Curso;
+import br.com.fiap.dao.impl.GenericDAOImpl;
+
+public class CursoDAO extends GenericDAOImpl<Curso, Integer>{
+
+}

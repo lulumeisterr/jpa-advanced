@@ -1,0 +1,15 @@
+package br.com.fiap.dao.impl;
+
+import javax.persistence.EntityManager;
+
+import br.com.fiap.bean.Aluno;
+
+public class AlunoDAOimpl extends GenericDAOImpl<Aluno, String> implements Aluno{
+
+	public AlunoDAOimpl(EntityManager em, Class<Aluno> clazz) {
+		super(em, clazz);
+	
+		
+	}
+
+}

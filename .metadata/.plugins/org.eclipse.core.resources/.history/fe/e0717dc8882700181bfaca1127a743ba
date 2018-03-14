@@ -1,0 +1,20 @@
+package br.com.fiap.jpa.entity;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class NotaFiscal {
+	
+	@GeneratedValue(generator="nota" , strategy = GenerationType.SEQUENCE)
+	@Id
+	@Column(name = "cd_codigo")
+	private int codigo;
+	@Column(name = "vl_fiscal" , nullable = false)
+	private double valor;
+	@Column(name = "nr_serie" , nullable = false , length=255)
+	private String numeroSerie;
+	
+
+}
