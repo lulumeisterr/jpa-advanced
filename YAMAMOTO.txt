@@ -1,0 +1,43 @@
+MVC - Model view Controll
+
+View = interação com usuario { JSP } 
+Onde se faz uma requisição para o Controller que é a servlet , então a 
+servlet faz o request getParameter que será mandado para a camada MODEL
+onde fica o DAO e o BO , onde o BO realiza a persistencia no banco de dados
+
+- Tomcat  inicia a servlet que inicia o doget e o dopost
+------------------------------------------------
+
+Private - dentro da minha classe
+public - onde objetos externos podem ter acesso
+Protected  - Pacote onde se pode ter acesso pelas classes filhas
+Default 
+------------------------------------------------
+Enums - conjunto de constantes
+-------------------------------------------------
+
+Interface , posso ter constantes e também podem 
+polimorfismo - metodos e classes , ° Sobrecara(Overload) onde tem o metodo com mesmo nome mas a assinatura deve ser diferente 
+				   ° Sobrescrita do metodo(pai)(Overide) em outras classes,
+-------------------------------------------------
+- Calendar - dentro do calendar eu tenho um objeto date
+- Date 
+---------------------------------------------------
+
+Classe abstrata é estrutura basica para filhas;
+
+Classe abstrata = é uma palavra reservada , ela não pode ser instanciada
+		  ela pode ter metodos abstratos , pois metodos abstratos não possui corpo , eles terminam em ponto e virgula;
+		  e metodos normais
+
+A primeira classe que não seja abstrata deve ser replicado o metodo
+
+---------------------------------------------------
+Interface - Utilizamos interface para referenciar ou fazer uma padronização de ações
+
+so sera necessario colocar os metodos que serão executados
+todos os metodos da interface são publicos("Não necessariamente");
+
+---------------------------------------------------
+Serializable - para realizar marcações para trafegar objetos via rede para ter o objeto novamente , ele da uma identificação para confirmar a classe
+realizado em aplicações distribuidas;s

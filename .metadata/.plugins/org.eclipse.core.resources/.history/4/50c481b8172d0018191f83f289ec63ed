@@ -1,0 +1,5 @@
+package br.com.fiap.ImplementacaoDAO;
+
+public class GenericDAOFather {
+
+}

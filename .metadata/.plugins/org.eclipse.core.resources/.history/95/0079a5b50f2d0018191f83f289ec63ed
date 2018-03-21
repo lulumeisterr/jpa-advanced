@@ -1,0 +1,15 @@
+package br.com.fiap.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Table(name = "T_JOGADOR")
+@Entity
+
+public class T_JOGADOR {
+
+	public T_JOGADOR(){
+		
+	}
+	
+}

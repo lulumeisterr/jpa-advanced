@@ -1,0 +1,8 @@
+package br.com.fiap.entity;
+
+import javax.persistence.Table;
+
+@Table(name = "T_TECNICO")
+public class Tecnico {
+
+}

@@ -8,7 +8,7 @@ e no java vc precisará ter esse atributo.
 Bidirecional - A FK fica nas duas classes
 
 -------------------------------------------------------------------------------------------------------------------------------
-mappedBy para nao mapear nas duas tabelas com a mesma FK
+mappedBy para nao mapear nas duas tabelas com a mesma FK , No manyTomany vc poem em qualquer um dos lados
 
 CASCADE - Quando eu cadastrar 1 ele ja automaticamente cadastra o outro
 

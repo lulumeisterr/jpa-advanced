@@ -1,5 +1,6 @@
 package br.com.fiap.jpa.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cascade;
+
 @Entity
 @Table(name = "T_ITEM_PEDIDO")
 @SequenceGenerator(sequenceName="SQ_ITEM_PEDIDO" , allocationSize = 1 , name="Itempedido")
@@ -21,10 +24,10 @@ public class ItemPedido {
 	@Column(name = "cd_Item")
 	private int codigo;
 
-	@Column(name = "vl_item")
+	@Column(name = "vl_item" , nullable = false)
 	private double valor;
 
-	@Column(name = "qt_item")
+	@Column(name = "qt_item" , nullable = false)
 	private int quantidade;
 
 	//Um Pedido para varios items
@@ -33,14 +36,33 @@ public class ItemPedido {
 	@JoinColumn(name = "cd_pedido") // Para ser obrigatorio e cadastrar o relacionamento
 	private Pedido pedido;
 
+	//FK
+	@JoinColumn(name = "cd_produto") // JoinColumn é para mudar o nome da chave estrangeira E é opcional
+	@ManyToOne(cascade = CascadeType.PERSIST)					 // Para ManyToMany é obrigatorio
+	private Produto produto;
+	
+	
+	
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
 	public ItemPedido(){
 		
 	}
 
-	public ItemPedido(double valor, int quantidade) {
+	
+
+	public ItemPedido( double valor, int quantidade, Pedido pedido, Produto produto) {
 		super();
 		this.valor = valor;
 		this.quantidade = quantidade;
+		this.pedido = pedido;
+		this.produto = produto;
 	}
 
 	public double getValor() {

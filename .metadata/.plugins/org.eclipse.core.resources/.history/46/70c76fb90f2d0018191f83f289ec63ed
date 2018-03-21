@@ -1,0 +1,16 @@
+package br.com.fiap.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Table(name = "T_JOGADOR")
+@Entity
+@SequenceGenerator(name = "player" , sequenceName="SQ_T_JOGADOR" , allocationSize = 1)
+public class T_JOGADOR {
+
+	public T_JOGADOR(){
+		
+	}
+	
+}

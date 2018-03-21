@@ -1,0 +1,81 @@
+package br.com.fiap.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import br.com.fiap.categoriaEnum.Categoria;
+
+@Entity
+@Table(name = "T_TIME")
+@SequenceGenerator(name="team" , sequenceName = "SQ_T_TIME" , allocationSize = 1)
+public class Time implements Serializable{
+
+	/**
+	 * 
+	 */
+	
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(generator = "team" , strategy=GenerationType.SEQUENCE)
+	@Column(name = "cd_time")
+	private int cd;
+	
+	@Column(name = "nm_time" , length = 100 , nullable = false)
+	private String nome;
+	
+	@Column(name = "ds_categoria")
+	@Enumerated(EnumType.STRING)
+	private Categoria categoria;
+	
+	@OneToOne
+	private Tecnico tecnico;
+	
+	@ManyToMany()
+	private Campeonato camp;
+	
+	
+	public Time(){
+		
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public Tecnico getTecnico() {
+		return tecnico;
+	}
+
+	public void setTecnico(Tecnico tecnico) {
+		this.tecnico = tecnico;
+	}
+	
+	
+
+	
+	
+}

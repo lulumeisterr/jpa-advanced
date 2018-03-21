@@ -14,12 +14,14 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="ExercicioParaNac"/>
 			<item value="04-JPA"/>
 			<item value="04-JPA-Introduction"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="ExercicioParaNac"/>
 			<item value="04-JPA"/>
 			<item value="04-JPA-Introduction"/>
 		</list>

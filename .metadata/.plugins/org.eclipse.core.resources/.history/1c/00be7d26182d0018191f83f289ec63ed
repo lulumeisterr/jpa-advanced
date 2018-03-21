@@ -1,0 +1,16 @@
+package br.com.fiap.ImplementacaoDAO;
+
+public class GenericDAOFather {
+
+	/*
+	 *  Os métodos de negócio específicos da entidade devem ser implementados na
+		classe DAO filha e não na DAO genérica!
+	 */
+	
+	
+	/*
+	 *  obtendo qual o tipo de dado genérico passado como parâmetro para o DAO 
+	 */
+	
+	
+}

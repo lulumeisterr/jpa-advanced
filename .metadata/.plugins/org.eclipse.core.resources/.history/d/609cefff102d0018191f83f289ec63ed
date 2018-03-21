@@ -1,0 +1,26 @@
+package br.com.fiap.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "T_CAMPEONATO")
+@SequenceGenerator(name = "campeonato" , sequenceName = "SQ_T_CAMPEONATO" ,  allocationSize = 1)
+public class Campeonato implements Serializable {
+
+
+	private static final long serialVersionUID = 7900507345779354544L;
+
+	@Id
+	@GeneratedValue(generator = "campeonato")
+	
+	
+	
+	
+}

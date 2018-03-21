@@ -1,0 +1,18 @@
+package br.com.fiap.genericDAO;
+
+public interface GenericDAO<Tabela, Chave>{
+
+	//Cadastrar
+	void Inserir(Tabela tabela);
+	
+	//Buscar
+	Tabela Buscar(Tabela tabela);
+	
+	//Excluir
+	void Excluir(Chave codigo);
+	
+	//Atualizar
+	
+	void Atualizar(Tabela tabela);
+	
+}
