@@ -4,69 +4,73 @@ import java.lang.reflect.ParameterizedType;
 
 import javax.persistence.EntityManager;
 
-import br.com.fiap.genericDAO.GenericDAO;
 
 public class GenericDAOFather<Tabela , Chave> implements GenericDAO<Tabela, Chave>{
 
 	
 	/*
-	 * DÃO QUE SERVE PARA QUALQUER CLASSE
-	   Onde você passa por parametro <Tabela,Chave) essa chave é a onde você deseja fazer a busca
+	 * DAO QUE SERVE PARA QUALQUER CLASSE
+	   Onde você passa por parametro (<Tabela,Chave) essa chave é a onde você deseja fazer a busca
 	 */
+	
 	
 	/*
 	 *  Os métodos de negócio específicos da entidade devem ser implementados na
 		classe DAO filha e não na DAO genérica!
 	 */
 	
+	private EntityManager em;
 	
-	//Construtor
-	@SuppressWarnings("unchecked")
-	public GenericDAOFather(EntityManager em){
-		super();
-		
-		/*
-		 *  obtendo qual o tipo de dado genérico passado como parâmetro para o DAO 
-		 */
-		
-		clazz = (Class<Tabela>) ((ParameterizedType) 
-                //Devolve os parametros da classe
-				getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-
-	}
-
-
 	//Pegar a tabela em tempo de excecução
-	private Class<Tabela> clazz;
+	@SuppressWarnings("unchecked")
+	private Class<Tabela> clazz = (Class<Tabela>) ((ParameterizedType) getClass().getGenericSuperclass())
+			.getActualTypeArguments()[0];
 	
+	public GenericDAOFather(EntityManager em) {
+		this.em = em;
+	}
 	
 	@Override
 	public void Inserir(Tabela tabela) {
-		
-		
+		em.persist(tabela);
 	}
 
 	@Override
-	public Tabela Buscar(Tabela tabela) {
-		
-		return null;
+	public Tabela Buscar(Chave codigo) {
+		return em.find(clazz, codigo);
 	}
 
 	@Override
 	public void Excluir(Chave codigo) {
-	
-		
+		Tabela tabela = Buscar(codigo);
+		if(tabela == null){
+			try{
+				throw new Exception("Registro não encontrado");
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 	}
 
 	@Override
 	public void Atualizar(Tabela tabela) {
-		
-		
+		em.merge(tabela);
 	}
 
 	@Override
-	public void commit() {
+	public void commit() throws Exception {
 	
+		try{
+			em.getTransaction().begin();
+			em.getTransaction().commit();
+		}catch(Exception e){
+			if(em.getTransaction().isActive()){
+				em.getTransaction().rollback();
+			}
+			e.printStackTrace();
+			
+			throw new Exception("Erro ao realizar o commit");
+		}
 		
 	}
 

@@ -1,0 +1,12 @@
+package br.com.fiap.genericDAOFilha;
+
+import javax.persistence.EntityManager;
+
+import br.com.fiap.ImplementacaoDAO.GenericDAOFather;
+
+public class Campeonato extends GenericDAOFather<CampeonatoDAOimpl, Integer> {
+
+	public Campeonato(EntityManager em) {
+		super(em);
+	}
+}

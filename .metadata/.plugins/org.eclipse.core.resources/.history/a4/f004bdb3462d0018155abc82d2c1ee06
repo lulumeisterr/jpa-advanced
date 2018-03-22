@@ -1,0 +1,29 @@
+package br.com.fiap.genericDAO;
+
+public interface GenericDAO<Tabela, Chave>{
+	
+	/*
+	 * Criar um DAO que possa ser reutilizado (via herança) para as operações básicas
+	   de persistência (CRUD);
+	 * 
+	 */
+	
+	
+	//Cadastrar
+	void Inserir(Tabela tabela);
+	
+	//Buscar
+	Tabela Buscar(Tabela codigo);
+	
+	//Excluir
+	void Excluir(Chave codigo);
+	
+	//Atualizar
+	void Atualizar(Tabela tabela);
+	
+	//Commitar
+	void commit();
+	
+	
+	
+}

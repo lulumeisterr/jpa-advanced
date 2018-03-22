@@ -2,6 +2,7 @@ package br.com.fiap.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,7 +27,6 @@ public class Tecnico implements Serializable{
 	@Id
 	@GeneratedValue(generator = "coach" , strategy = GenerationType.SEQUENCE)
 	
-	@OneToOne(mappedBy = "tecnico")
 	@Column(name = "cd_tecnico")
 	private int cd;
 	
@@ -36,11 +36,20 @@ public class Tecnico implements Serializable{
 	@Column(name = "vl_salario")
 	private double salario;
 	
+	//Indicando o lado não dominante da relação. O Lado que nao possui FK
+	@OneToOne(mappedBy = "tecnico", cascade = CascadeType.PERSIST)
+	private Time time;
 
 	public Tecnico(){
 		
 	}
-	
+		
+	public Tecnico(String nome, double salario) {
+		super();
+		this.nome = nome;
+		this.salario = salario;
+	}
+
 	public String getNome() {
 		return nome;
 	}

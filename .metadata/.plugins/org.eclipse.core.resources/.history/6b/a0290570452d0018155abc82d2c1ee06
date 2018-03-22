@@ -1,0 +1,74 @@
+package br.com.fiap.ImplementacaoDAO;
+
+import java.lang.reflect.ParameterizedType;
+
+import javax.persistence.EntityManager;
+
+import br.com.fiap.genericDAO.GenericDAO;
+
+public class GenericDAOFather<Tabela , Chave> implements GenericDAO<Tabela, Chave>{
+
+	
+	/*
+	 * DÃO QUE SERVE PARA QUALQUER CLASSE
+	   Onde você passa por parametro <Tabela,Chave) essa chave é a onde você deseja fazer a busca
+	 */
+	
+	/*
+	 *  Os métodos de negócio específicos da entidade devem ser implementados na
+		classe DAO filha e não na DAO genérica!
+	 */
+	
+	
+	//Construtor
+	@SuppressWarnings("unchecked")
+	public GenericDAOFather(EntityManager em){
+		super();
+		
+		/*
+		 *  obtendo qual o tipo de dado genérico passado como parâmetro para o DAO 
+		 */
+		
+		clazz = (Class<Tabela>) ((ParameterizedType) 
+                //Devolve os parametros da classe
+				getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+
+	}
+
+
+	//Pegar a tabela em tempo de excecução
+	private Class<Tabela> clazz;
+	
+	
+	@Override
+	public void Inserir(Tabela tabela) {
+		
+		
+	}
+
+	@Override
+	public Tabela Buscar(Tabela tabela) {
+		
+		return null;
+	}
+
+	@Override
+	public void Excluir(Chave codigo) {
+	
+		
+	}
+
+	@Override
+	public void Atualizar(Tabela tabela) {
+		
+		
+	}
+
+	@Override
+	public void commit() {
+	
+		
+	}
+
+	
+}
