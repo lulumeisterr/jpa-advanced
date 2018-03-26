@@ -8,19 +8,13 @@ TENDO O JDBC COMO BASE , FACILITANDO O DESENVOLVIMENTO A PERSISTENCIA
 um framework , baseando em java bean que se retrata um framework de mapeamento de objeto relacional 
 em banco de dados , tendo como base a jdbc , ou seja ela se molda a jdbc facilitando o nosso desenvolvimento
 
---------------------------------------------------------------------------------------------------------------------------------
+1 - Representam as unidades de persistência;
+2 - Permitem o acesso aos dados por meio de métodos get e set;
+3 - Possuem, obrigatoriamente, um identificador único;
+4 - Tais classes são mapeadas para o banco de dados por meio de anotações;
+5 - São como espelhos do banco de dados, isto é, uma instância é criada ou alterada primeiramente em memória e posteriormente atualizada no banco de dados;
+6 -  São gerenciadas por um mecanismo de persistência denominado Entity Manager;
 
-XML
- arquivo de texto com tags html
--------------------------------------------------------------------------------------------------------------------------------
-framework - conjunto de biblioteca 
-------------------------------------------------------------------------------------------------------------------------------
-HIBERNATE 
-
-É UM FRAMEWORK CRIADO PARA FACILITAR A PERSISTENCIA DE DADOS EM JAVA ,
-TRAS COMO DIFERENCIAL A ORM Q ABSTRAI DO PROGRAMADOR MUITAS TAREFAS REPETITIVAS
-
-https://www.devmedia.com.br/curso/curso-jpql/2108
 --------------------------------------------------------------------------------------------------------------------------------
 
 ORM  -  ORM é uma framework que trabalha com banco de dados , forma de criar uma camada entre dados relacional e objetos. 
@@ -31,37 +25,66 @@ ORM  -  ORM é uma framework que trabalha com banco de dados , forma de criar uma
 
 Utilizando um ORM, também se ganha produtividade, pois deixa-se de escrever os comando SQL para deixar que o próprio ORM, faça isto por você.
 
----------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+
+HIBERNATE 
+
+É UM FRAMEWORK CRIADO PARA FACILITAR A PERSISTENCIA DE DADOS EM JAVA ,
+TRAS COMO DIFERENCIAL A ORM Q ABSTRAI DO PROGRAMADOR MUITAS TAREFAS REPETITIVAS
+
+https://www.devmedia.com.br/curso/curso-jpql/2108
+
+XML
+arquivo de texto com tags html
+framework - conjunto de biblioteca 
+-------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
 Anotações em java
-
-você pode por em :
-
-- atributos
-- metodos
-- classes
 
 São textos inseridos diretamente no código fonte que expressam
 informações complementares sobre o uma classe, seus métodos,
-propriedades, etc
+propriedades que Permitem especificar metadados dentro do código mas
+Não é possível alterar as anotações caso não se tenha o código fonte;
 
 - Objetos são instanciados a partir de classes anotadas;
 - § Processador reconhece as anotações encapsuladas nos objeto;
 - § Os resultados são produzidos a partir das informações contidas nas anotações
 
+você pode por em :
 
+- atributos
+- metodos(Métodos definem os parâmetros aceitos pela anotação);
+- classes
+
+- Parâmetros possuem tipos de dados restritos (String, Class, Enumeration, Annotation e Arrays desses tipos);
+- Parâmetros podem ter valores default;
+
+@Retention indica onde e por quanto tempo anotações com este tipo serãomantidas:
 @Target , avisar para qual essa anotacao serve
 
 -----------------------------------------------------------------------------------------------------------------------------------
+
 API REFLECTION - ELA PEGA TODAS AS INFORMAÇÕES DE COMO ELA FOI CRIADA ATRAS DELA
 
+APIs são responsáveis, entre outras coisas, pela transformação dos objeto
+em declarações SQL
 
 ----------------------------------------------------------------------------------------------------------------------------------
 					Frame
 
--  A anotação @Entity especifica que uma classe é uma entidade;
+-  A anotação @Entity -  especifica que uma classe é uma entidade;
 - alterar o nome da tabela assoociada a entidade através do atributo @Table(name=“TAB_CLIENTE”)
-- @ID Deve-se sempre definir o atributo que representará a chave primária
-- @GENERATEDVALUE Especifica a estratégia de geração de valores automáticos para propriedades;
+- @ID - Deve-se sempre definir o atributo que representará a chave primária
+- @GENERATEDVALUE - Especifica a estratégia de geração de valores automáticos para propriedades;
+- @TRANSIENT - Indica que determinado atributo não deve ser persistido;
+- @TEMPORALType - Especifica o tipo de dado a ser armazenado em propriedades do tipo Date e Calendar;
+- @LOB - Permite mapear objetos de grande dimensão para a base de dados. Exemplo: imagens, documentos de texto, planilhas, etc...
+- @ENUM - Atributo de dominio
+
+- name: nome a ser referenciado pelo @GeneratedValue;
+– sequenceName: nome da sequence de banco de dados;
+– allocationSize : incremento
 
 	–  Generator: nome do gerador de chaves;
 	–  Strategy: indica o tipo de estratégia utilizada;
@@ -73,23 +96,48 @@ API REFLECTION - ELA PEGA TODAS AS INFORMAÇÕES DE COMO ELA FOI CRIADA ATRAS DELA
 
 As anotações podem ser feitas tanto nas propriedades da classe quanto nos métodos get;
 
----------------------------------------------------------------------------------------------------------------------------------
-ENTITY MANAGER - Unidade central para gerenciamento de entidades na JPA 
-		  Responsável pela criação, atualização, remoção e consulta às entidades;
 
-Persistence Unit -  é onde definimos as Configurações de
-banco de dados que iremos acessar, a URL de conexão, etc
+
 ---------------------------------------------------------------------------------------------------------------------------------
+ENTITY MANAGER - Unidade central para gerenciamento de entidades na JPA Responsável pela criação, atualização, remoção e consulta às entidades;
+
+- Cada Entity Manager mantém apenas um único Persistence Context
+
+
+Existem duas formas de obter-se um Entity Manager:
+
+1. A própria aplicação obtém um Entity Manager e o fecha utilizando métodos da
+API apropriados - Application Managed Entity Manager;
+
+2. Um container instancia e gerencia o Entity Manager -Container Managed
+Entity Manager;
+
+-----------------------------------------------------------------------------------------------------------------------------------
 			XML
 
-- Uma Persistence Unit define todas as configurações necessárias para que um Entity
-Manager consiga efetuar a persistência de um conjunto de entidades;  Por exemplo, na Persistence Unit é onde definimos as Configurações de banco de
-dados que iremos acessar, a URL de conexão, etc.
+- Uma Persistence Unit define todas as configurações necessárias para que um Entity Manager consiga efetuar a persistência de um conjunto de entidades; 
+Por exemplo, na Persistence Unit é onde definimos as Configurações de banco de dados que iremos acessar, a URL de conexão, etc.
 
-Cada Persistence Unit é identificada por um nome dentro do arquivo
-persistence.xml na pasta META-INF;
+Persistence Unit -  é onde definimos as Configurações de banco de dados que iremos acessar, a URL de conexão, 
+Persistence Unit -  Cada persistence Unit é identificada por um nome dentro do arquivo persistence.xml na pasta META-INF;
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+Entidades Gerenciadas:
+
+1 - Quando entidades estão associadas a um contexto de persistência;
+2 - Alterações no estado das entidades são sincronizadas com o banco de dados;
+
+Entidades Não Gerenciadas:
+
+1 - Entidades não associadas a um contexto de persistência (por exemplo quando são instanciadas ou quanto o Entity Manager é fechado);
+2 - Alterações nas entidades não se refletem no banco de dados;
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 			TRANSAÇÕES
 
 Para obter-se uma transação do Entity Manager utilizar o método
