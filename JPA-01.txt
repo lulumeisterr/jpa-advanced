@@ -1,35 +1,35 @@
-O'que È JPA ? 
+O'que √© JPA ? 
 
-… UMA DOCUMETACAO DE ESPECIFICACAO
+√â UMA DOCUMETACAO DE ESPECIFICACAO
 
-… A API DO JAVA QUE DITA COMO OS FRAMEWORKS ORM DEVE SER IMPLEMENTADOS EM BANCOS RELACIONAIS
+√â A API DO JAVA QUE DITA COMO OS FRAMEWORKS ORM DEVE SER IMPLEMENTADOS EM BANCOS RELACIONAIS
 TENDO O JDBC COMO BASE , FACILITANDO O DESENVOLVIMENTO A PERSISTENCIA
 
 um framework , baseando em java bean que se retrata um framework de mapeamento de objeto relacional 
 em banco de dados , tendo como base a jdbc , ou seja ela se molda a jdbc facilitando o nosso desenvolvimento
 
-1 - Representam as unidades de persistÍncia;
-2 - Permitem o acesso aos dados por meio de mÈtodos get e set;
-3 - Possuem, obrigatoriamente, um identificador ˙nico;
-4 - Tais classes s„o mapeadas para o banco de dados por meio de anotaÁıes;
-5 - S„o como espelhos do banco de dados, isto È, uma inst‚ncia È criada ou alterada primeiramente em memÛria e posteriormente atualizada no banco de dados;
-6 -  S„o gerenciadas por um mecanismo de persistÍncia denominado Entity Manager;
+1 - Representam as unidades de persist√™ncia;
+2 - Permitem o acesso aos dados por meio de m√©todos get e set;
+3 - Possuem, obrigatoriamente, um identificador √∫nico;
+4 - Tais classes s√£o mapeadas para o banco de dados por meio de anota√ß√µes;
+5 - S√£o como espelhos do banco de dados, isto √©, uma inst√¢ncia √© criada ou alterada primeiramente em mem√≥ria e posteriormente atualizada no banco de dados;
+6 -  S√£o gerenciadas por um mecanismo de persist√™ncia denominado Entity Manager;
 
 --------------------------------------------------------------------------------------------------------------------------------
 
-ORM  -  ORM È uma framework que trabalha com banco de dados , forma de criar uma camada entre dados relacional e objetos. 
-               De um lado, vocÍ tem as tabelas e seus relacionamentos, do outro, os objetos de uma linguagem OO.
+ORM  -  ORM √© uma framework que trabalha com banco de dados , forma de criar uma camada entre dados relacional e objetos. 
+               De um lado, voc√™ tem as tabelas e seus relacionamentos, do outro, os objetos de uma linguagem OO.
 
                - Ele faz o mapeamento da sua classe para o banco de dados e cada ORM tem suas particularidades para gerar o SQL 
-	referente a inserÁ„o do objeto que corresponde a uma tabela no banco de dados e realizar a operaÁ„o. 
+	referente a inser√ß√£o do objeto que corresponde a uma tabela no banco de dados e realizar a opera√ß√£o. 
 
-Utilizando um ORM, tambÈm se ganha produtividade, pois deixa-se de escrever os comando SQL para deixar que o prÛprio ORM, faÁa isto por vocÍ.
+Utilizando um ORM, tamb√©m se ganha produtividade, pois deixa-se de escrever os comando SQL para deixar que o pr√≥prio ORM, fa√ßa isto por voc√™.
 
 -------------------------------------------------------------------------------------------------------------------------------
 
 HIBERNATE 
 
-… UM FRAMEWORK CRIADO PARA FACILITAR A PERSISTENCIA DE DADOS EM JAVA ,
+√â UM FRAMEWORK CRIADO PARA FACILITAR A PERSISTENCIA DE DADOS EM JAVA ,
 TRAS COMO DIFERENCIAL A ORM Q ABSTRAI DO PROGRAMADOR MUITAS TAREFAS REPETITIVAS
 
 https://www.devmedia.com.br/curso/curso-jpql/2108
@@ -40,112 +40,126 @@ framework - conjunto de biblioteca
 -------------------------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------
-AnotaÁıes em java
+Anota√ß√µes em java
 
-S„o textos inseridos diretamente no cÛdigo fonte que expressam
-informaÁıes complementares sobre o uma classe, seus mÈtodos,
-propriedades que Permitem especificar metadados dentro do cÛdigo mas
-N„o È possÌvel alterar as anotaÁıes caso n„o se tenha o cÛdigo fonte;
+S√£o textos inseridos diretamente no c√≥digo fonte que expressam
+informa√ß√µes complementares sobre o uma classe, seus m√©todos,
+propriedades que Permitem especificar metadados dentro do c√≥digo mas
+N√£o √© poss√≠vel alterar as anota√ß√µes caso n√£o se tenha o c√≥digo fonte;
 
-- Objetos s„o instanciados a partir de classes anotadas;
-- ß Processador reconhece as anotaÁıes encapsuladas nos objeto;
-- ß Os resultados s„o produzidos a partir das informaÁıes contidas nas anotaÁıes
+- Objetos s√£o instanciados a partir de classes anotadas;
+- ¬ß Processador reconhece as anota√ß√µes encapsuladas nos objeto;
+- ¬ß Os resultados s√£o produzidos a partir das informa√ß√µes contidas nas anota√ß√µes
 
-vocÍ pode por em :
+voc√™ pode por em :
 
 - atributos
-- metodos(MÈtodos definem os par‚metros aceitos pela anotaÁ„o);
+- metodos(M√©todos definem os par√¢metros aceitos pela anota√ß√£o);
 - classes
 
-- Par‚metros possuem tipos de dados restritos (String, Class, Enumeration, Annotation e Arrays desses tipos);
-- Par‚metros podem ter valores default;
+- Par√¢metros possuem tipos de dados restritos (String, Class, Enumeration, Annotation e Arrays desses tipos);
+- Par√¢metros podem ter valores default;
 
-@Retention indica onde e por quanto tempo anotaÁıes com este tipo ser„omantidas:
+@Retention indica onde e por quanto tempo anota√ß√µes com este tipo ser√£omantidas:
 @Target , avisar para qual essa anotacao serve
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-API REFLECTION - ELA PEGA TODAS AS INFORMA«’ES DE COMO ELA FOI CRIADA ATRAS DELA
+API REFLECTION - ELA PEGA TODAS AS INFORMA√á√ïES DE COMO ELA FOI CRIADA ATRAS DELA
 
-APIs s„o respons·veis, entre outras coisas, pela transformaÁ„o dos objeto
-em declaraÁıes SQL
+APIs s√£o respons√°veis, entre outras coisas, pela transforma√ß√£o dos objeto
+em declara√ß√µes SQL
 
 ----------------------------------------------------------------------------------------------------------------------------------
 					Frame
 
--  A anotaÁ„o @Entity -  especifica que uma classe È uma entidade;
-- alterar o nome da tabela assoociada a entidade atravÈs do atributo @Table(name=ìTAB_CLIENTEî)
-- @ID - Deve-se sempre definir o atributo que representar· a chave prim·ria
-- @GENERATEDVALUE - Especifica a estratÈgia de geraÁ„o de valores autom·ticos para propriedades;
-- @TRANSIENT - Indica que determinado atributo n„o deve ser persistido;
+-  A anota√ß√£o @Entity -  especifica que uma classe √© uma entidade;
+- alterar o nome da tabela assoociada a entidade atrav√©s do atributo @Table(name=‚ÄúTAB_CLIENTE‚Äù)
+- @ID - Deve-se sempre definir o atributo que representar√° a chave prim√°ria
+- @GENERATEDVALUE - Especifica a estrat√©gia de gera√ß√£o de valores autom√°ticos para propriedades;
+- @TRANSIENT - Indica que determinado atributo n√£o deve ser persistido;
 - @TEMPORALType - Especifica o tipo de dado a ser armazenado em propriedades do tipo Date e Calendar;
-- @LOB - Permite mapear objetos de grande dimens„o para a base de dados. Exemplo: imagens, documentos de texto, planilhas, etc...
+- @LOB - Permite mapear objetos de grande dimens√£o para a base de dados. Exemplo: imagens, documentos de texto, planilhas, etc...
 - @ENUM - Atributo de dominio
 
 - name: nome a ser referenciado pelo @GeneratedValue;
-ñ sequenceName: nome da sequence de banco de dados;
-ñ allocationSize : incremento
+‚Äì sequenceName: nome da sequence de banco de dados;
+‚Äì allocationSize : incremento
 
-	ñ  Generator: nome do gerador de chaves;
-	ñ  Strategy: indica o tipo de estratÈgia utilizada;
+	‚Äì  Generator: nome do gerador de chaves;
+	‚Äì  Strategy: indica o tipo de estrat√©gia utilizada;
 
-	    Tipos mais comuns de estratÈgias de geraÁ„o:
+	    Tipos mais comuns de estrat√©gias de gera√ß√£o:
 
-	ñ GeneratorType.SEQUENCE: baseado em sequence;
-	ñ GeneratorType.IDENTITY: campos identidade;
+	‚Äì GeneratorType.SEQUENCE: baseado em sequence;
+	‚Äì GeneratorType.IDENTITY: campos identidade;
 
-As anotaÁıes podem ser feitas tanto nas propriedades da classe quanto nos mÈtodos get;
+As anota√ß√µes podem ser feitas tanto nas propriedades da classe quanto nos m√©todos get;
 
 
 
 ---------------------------------------------------------------------------------------------------------------------------------
-ENTITY MANAGER - Unidade central para gerenciamento de entidades na JPA Respons·vel pela criaÁ„o, atualizaÁ„o, remoÁ„o e consulta ‡s entidades;
+ENTITY MANAGER - Unidade central para gerenciamento de entidades na JPA Respons√°vel pela cria√ß√£o, atualiza√ß√£o, remo√ß√£o e consulta √†s entidades;
 
-- Cada Entity Manager mantÈm apenas um ˙nico Persistence Context
+Para se obter um EntityManger voc√™ deve primeiro ter uma fabrica que se referencia por EntityManagerFactory 
+onde ser√° chamada a persiste.xml cujo o par√¢metro a ser recuperado da persistence unit, deve ser passado para ter os devido acesso ao Banco de dados.
 
+Ex : EntityManagerFactory f = Persistence.createEntityManagerFactory("cliente");
+
+Depois √© s√≥ obter o Entity Manager a partir do EntityManagerFactory:
+EntityManager em = f.createEntityManager();
+
+
+- Cada Entity Manager mant√©m apenas um √∫nico Persistence Context
 
 Existem duas formas de obter-se um Entity Manager:
 
-1. A prÛpria aplicaÁ„o obtÈm um Entity Manager e o fecha utilizando mÈtodos da
+1. A pr√≥pria aplica√ß√£o obt√©m um Entity Manager e o fecha utilizando m√©todos da
 API apropriados - Application Managed Entity Manager;
 
 2. Um container instancia e gerencia o Entity Manager -Container Managed
 Entity Manager;
 
+
+
 -----------------------------------------------------------------------------------------------------------------------------------
 			XML
 
-- Uma Persistence Unit define todas as configuraÁıes necess·rias para que um Entity Manager consiga efetuar a persistÍncia de um conjunto de entidades; 
-Por exemplo, na Persistence Unit È onde definimos as ConfiguraÁıes de banco de dados que iremos acessar, a URL de conex„o, etc.
+- Uma Persistence Unit define todas as configura√ß√µes necess√°rias para que um Entity Manager consiga efetuar a persist√™ncia de um conjunto de entidades; 
+Por exemplo, na Persistence Unit √© onde definimos as Configura√ß√µes de banco de dados que iremos acessar, a URL de conex√£o, etc.
 
-Persistence Unit -  È onde definimos as ConfiguraÁıes de banco de dados que iremos acessar, a URL de conex„o, 
-Persistence Unit -  Cada persistence Unit È identificada por um nome dentro do arquivo persistence.xml na pasta META-INF;
+Persistence Unit -  √© onde definimos as Configura√ß√µes de banco de dados que iremos acessar, a URL de conex√£o, 
+Persistence Unit -  Cada persistence Unit √© identificada por um nome dentro do arquivo persistence.xml na pasta META-INF;
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Entidades Gerenciadas:
 
-1 - Quando entidades est„o associadas a um contexto de persistÍncia;
-2 - AlteraÁıes no estado das entidades s„o sincronizadas com o banco de dados;
+1 - Quando entidades est√£o associadas a um contexto de persist√™ncia;
+2 - Altera√ß√µes no estado das entidades s√£o sincronizadas com o banco de dados;
 
-Entidades N„o Gerenciadas:
+Entidades N√£o Gerenciadas:
 
-1 - Entidades n„o associadas a um contexto de persistÍncia (por exemplo quando s„o instanciadas ou quanto o Entity Manager È fechado);
-2 - AlteraÁıes nas entidades n„o se refletem no banco de dados;
+1 - Entidades n√£o associadas a um contexto de persist√™ncia (por exemplo quando s√£o instanciadas ou quanto o Entity Manager √© fechado);
+2 - Altera√ß√µes nas entidades n√£o se refletem no banco de dados;
 
 ----------------------------------------------------------------------------------------------------------------------------------
+			TRANSA√á√ïES
 
+As transa√ß√µes definem quanto as entidades devem ser sincronizadas com a
+base de dados;
 
+-Resource Local: transa√ß√£o nativa JDBC (mais simples, de responsabilidade da aplica√ß√£o);
 
+-Java Transaction API (JTA): mecanismo padr√£o do Java EE (mais elaborado, o container
+Java EE gerencia, √© transparente para a aplica√ß√£o);
 
-			TRANSA«’ES
-
-Para obter-se uma transaÁ„o do Entity Manager utilizar o mÈtodo
+Para obter-se uma transa√ß√£o do Entity Manager utilizar o m√©todo
 getTransaction()
 
-begin(): delimita o inÌcio de uma transaÁ„o (È obrigatÛrio, um por vez)
-ï commit(): confirma a transaÁ„o (sincroniza o contexto de persistÍncia com a base de
+begin(): delimita o in√≠cio de uma transa√ß√£o (√© obrigat√≥rio, um por vez)
+‚Ä¢ commit(): confirma a transa√ß√£o (sincroniza o contexto de persist√™ncia com a base de
 dados)
-ï rollback(): desfaz a transaÁ„o
-ï isActive(): verifica se a transaÁ„o encontra-se em andamento, isto È, n„o
+‚Ä¢ rollback(): desfaz a transa√ß√£o
+‚Ä¢ isActive(): verifica se a transa√ß√£o encontra-se em andamento, isto √©, n√£o
 ocorreu commit ou rollback ainda;
