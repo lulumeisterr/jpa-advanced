@@ -16,9 +16,12 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.NamedQuery;
+
 @Entity
 @Table(name="JPA_T_CLIENTE")
 @SequenceGenerator(name="seqCliente", sequenceName="SEQ_JPA_T_CLIENTE", allocationSize=1)
+
 public class Cliente {
 
 	@Id

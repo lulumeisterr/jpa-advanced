@@ -14,9 +14,16 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.NamedQuery;
+
 @Entity
 @Table(name="JPA_T_RESERVA")
 @SequenceGenerator(name="seqReserva", sequenceName="SEQ_JPA_T_RESERVA", allocationSize=1)
+
+//Criando Query pela classe
+@NamedQuery(name = "Reserva.contarPorData" , query = "select count(r) from Reserva r where r.dataReserva between :i and :f")
+//@NamedQuery(name = "RetornarClienteMaiorReserva" , query = "select max(r) from Reserva r where (SELECT count(c) from Cliente c)")
+
 public class Reserva {
 
 	@Id

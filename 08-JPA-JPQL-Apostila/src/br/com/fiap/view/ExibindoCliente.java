@@ -37,7 +37,7 @@ public class ExibindoCliente {
 
 		// Realizar um select para obter o cliente
 
-		List<Cliente> listClient = cliDAO.ListarPorNomeComLike("a");
+		List<Cliente> listClient = cliDAO.ListarPorNomeComLike("thiago");
 
 		System.out.println("LISTA DE CLIENTES");
 

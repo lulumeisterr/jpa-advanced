@@ -22,7 +22,7 @@ public class BuscandoPorDatas {
 			Pacote p = new Pacote();
 			PacoteDAO pacDAO = new PacoteDAOImpl(em);
 			
-			Calendar Entrada = new GregorianCalendar(2018 , Calendar.FEBRUARY , 27);
+			Calendar Entrada = new GregorianCalendar(2015 , Calendar.MAY , 27);
 			Calendar Saida = new GregorianCalendar(2017 , Calendar.OCTOBER , 23);
 			
 			List<Pacote> listDATA = pacDAO.ListarPorData(Entrada , Saida);
@@ -30,7 +30,7 @@ public class BuscandoPorDatas {
 			for (Pacote pacote : listDATA) {
 				
 				System.out.println("Data de entrada : " + Entrada);
-				System.out.println(pacote.getDataSaida());
+				System.out.println(pacote.getDescricao());
 			}
 			
 			em.close();

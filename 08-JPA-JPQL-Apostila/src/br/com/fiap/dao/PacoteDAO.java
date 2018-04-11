@@ -12,5 +12,6 @@ public interface PacoteDAO extends GenericDAO<Pacote,Integer>{
 	List<Pacote> obterListaPacote(String nm_transporte);
 	List<Pacote> ListarTransporte(Transporte t);
 	List<Pacote> ListarPorData(Calendar inicio , Calendar fim);
+	double CalcularMedia();
 
 }
