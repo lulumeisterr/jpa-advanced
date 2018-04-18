@@ -14,4 +14,5 @@ public interface PacoteDAO extends GenericDAO<Pacote,Integer>{
 	List<Pacote> ListarPorData(Calendar inicio , Calendar fim);
 	double CalcularMedia();
 
+	List<Pacote> buscarPorDescricao(String desc);
 }

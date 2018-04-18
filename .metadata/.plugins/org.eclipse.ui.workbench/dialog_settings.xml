@@ -2,24 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="250" key="dialogHeight"/>
-		<item value="350" key="dialogWidth"/>
+		<item value="426" key="dialogWidth"/>
 		<list key="textEntries">
+			<item value="1"/>
 			<item value="2"/>
-			<item value="2"/>
+			<item value="1"/>
+			<item value="1"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.jdt.ui.actions.GenerateGetterSetter"/>
 			<item value="org.eclipse.jdt.ui.edit.text.java.generate.constructor.using.fields"/>
+			<item value="org.eclipse.jdt.ui.actions.GenerateGetterSetter"/>
+			<item value="org.eclipse.jdt.ui.CompilationUnitEditorExercicioCompletoPara2_NAC_E_PS/src/br/com/fiap/exception/IdNotFoundException.java"/>
+			<item value="org.eclipse.jdt.debug.ui.actions.AddExceptionBreakpoint"/>
 		</list>
 		<list key="orderedProviders">
-			<item value="org.eclipse.ui.actions"/>
 			<item value="org.eclipse.ui.commands"/>
+			<item value="org.eclipse.ui.actions"/>
+			<item value="org.eclipse.ui.editors"/>
+			<item value="org.eclipse.ui.actions"/>
 		</list>
 		<list key="textArray">
-			<item value="ge"/>
-			<item value="get"/>
-			<item value="constr"/>
 			<item value="cons"/>
+			<item value="get "/>
+			<item value="get"/>
+			<item value="exc"/>
+			<item value="exce"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
 		</list>
 	</section>
 </section>

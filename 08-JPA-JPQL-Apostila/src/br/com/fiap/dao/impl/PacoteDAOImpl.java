@@ -47,6 +47,12 @@ public class PacoteDAOImpl extends GenericDAOImpl<Pacote,Integer> implements Pac
 	public double CalcularMedia() {
 		return em.createQuery("select AVG(p.preco) from Pacote p" , Double.class).getSingleResult();
 	}
+
+	@Override
+	public List<Pacote> buscarPorDescricao(String desc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 	
