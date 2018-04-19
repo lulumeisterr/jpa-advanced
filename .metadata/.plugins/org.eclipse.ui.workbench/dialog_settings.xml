@@ -4,29 +4,12 @@
 		<item value="250" key="dialogHeight"/>
 		<item value="426" key="dialogWidth"/>
 		<list key="textEntries">
-			<item value="1"/>
-			<item value="2"/>
-			<item value="1"/>
-			<item value="1"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.jdt.ui.edit.text.java.generate.constructor.using.fields"/>
-			<item value="org.eclipse.jdt.ui.actions.GenerateGetterSetter"/>
-			<item value="org.eclipse.jdt.ui.CompilationUnitEditorExercicioCompletoPara2_NAC_E_PS/src/br/com/fiap/exception/IdNotFoundException.java"/>
-			<item value="org.eclipse.jdt.debug.ui.actions.AddExceptionBreakpoint"/>
 		</list>
 		<list key="orderedProviders">
-			<item value="org.eclipse.ui.commands"/>
-			<item value="org.eclipse.ui.actions"/>
-			<item value="org.eclipse.ui.editors"/>
-			<item value="org.eclipse.ui.actions"/>
 		</list>
 		<list key="textArray">
-			<item value="cons"/>
-			<item value="get "/>
-			<item value="get"/>
-			<item value="exc"/>
-			<item value="exce"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">

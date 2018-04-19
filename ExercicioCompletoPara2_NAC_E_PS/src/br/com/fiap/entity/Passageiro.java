@@ -41,12 +41,15 @@ public class Passageiro implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private GeneroEnum genero;
 	
+	//Uma passageiro muitas corridas
 	@OneToMany(mappedBy="passageiro")
 	private List<Corrida> corridas;
 
 	public Passageiro() {
 		
 	}
+
+	
 	
 	public Passageiro(String nome, Calendar dataNascimento, GeneroEnum genero) {
 		super();
@@ -54,6 +57,8 @@ public class Passageiro implements Serializable{
 		this.dataNascimento = dataNascimento;
 		this.genero = genero;
 	}
+
+
 
 	public int getCodigo() {
 		return codigo;
@@ -86,7 +91,16 @@ public class Passageiro implements Serializable{
 	public void setGenero(GeneroEnum genero) {
 		this.genero = genero;
 	}
+
+	public List<Corrida> getCorridas() {
+		return corridas;
+	}
+
+	public void setCorridas(List<Corrida> corridas) {
+		this.corridas = corridas;
+	}
 	
+
 	
 	
 }

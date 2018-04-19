@@ -41,15 +41,8 @@ public class Veiculo implements Serializable{
 	@Column(name = "nr_ano")
 	private int Ano;
 
-	//MM
-	@ManyToMany
-	@JoinTable(name = "T_VEICULO_MOTORISTA" , joinColumns = @JoinColumn(name = "cd_veiculo") , 
-						 				inverseJoinColumns = @JoinColumn(name = "cd_motorista"))
-	
-	List<Motorista> listamotor;
-	
-	
-	List<Corrida> listaCorrida;
+	@ManyToMany(mappedBy="listaVeiculo")
+	private List<Motorista> motoristas;
 	
 	public Veiculo() {
 		
@@ -61,6 +54,7 @@ public class Veiculo implements Serializable{
 		this.cor = cor;
 		Ano = ano;
 	}
+
 
 	public int getCodigo() {
 		return codigo;
@@ -93,4 +87,13 @@ public class Veiculo implements Serializable{
 	public void setAno(int ano) {
 		Ano = ano;
 	}
+
+	public List<Motorista> getMotoristas() {
+		return motoristas;
+	}
+
+	public void setMotoristas(List<Motorista> motoristas) {
+		this.motoristas = motoristas;
+	}
+	
 }

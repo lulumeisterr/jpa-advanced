@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -42,18 +43,36 @@ public class Corrida implements Serializable {
 	@Column(name = "vl_corrida" , nullable = false)
 	private float valorCorrida;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST) //Inserindo em cascata
 	@JoinColumn(name="nr_carteira")
 	private Motorista motorista;
 	
-	@ManyToOne(cascade=CascadeType.PERSIST)
+	@ManyToOne(cascade=CascadeType.PERSIST) // Inserindo em cascata
 	@JoinColumn(name="cd_passageiro")
 	private Passageiro passageiro;
-
+	
+	//Uma Corrida tem um pagamento
+	@OneToOne(mappedBy="corrida",cascade=CascadeType.PERSIST)
+	private Pagamento pagamento;
+	
 	public Corrida() {
 		
 	}
+
 	
+	
+	public Pagamento getPagamento() {
+		return pagamento;
+	}
+
+
+
+	public void setPagamento(Pagamento pagamento) {
+		this.pagamento = pagamento;
+	}
+
+
+
 	public Corrida(String origem, String destino, Calendar dataCorrida, float valorCorrida) {
 		super();
 		this.origem = origem;
@@ -61,6 +80,8 @@ public class Corrida implements Serializable {
 		this.dataCorrida = dataCorrida;
 		this.valorCorrida = valorCorrida;
 	}
+
+
 
 	public int getCodigo() {
 		return codigo;
@@ -101,6 +122,23 @@ public class Corrida implements Serializable {
 	public void setValorCorrida(float valorCorrida) {
 		this.valorCorrida = valorCorrida;
 	}
+
+	public Motorista getMotorista() {
+		return motorista;
+	}
+
+	public void setMotorista(Motorista motorista) {
+		this.motorista = motorista;
+	}
+
+	public Passageiro getPassageiro() {
+		return passageiro;
+	}
+
+	public void setPassageiro(Passageiro passageiro) {
+		this.passageiro = passageiro;
+	}
 	
+
 	
 }

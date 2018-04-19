@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.hibernate.mapping.List"/>
-<fullyQualifiedTypeName name="br.com.fiap.entity.Jogador"/>
 <fullyQualifiedTypeName name="br.com.fiap.categoriaEnum.Posicao"/>
 <fullyQualifiedTypeName name="br.com.fiap.entity.Campeonato"/>
 <fullyQualifiedTypeName name="br.com.fiap.ImplementacaoDAO.GenericDAO"/>
@@ -26,14 +24,11 @@
 <fullyQualifiedTypeName name="br.com.fiap.daoInterface.MotoristaDAO"/>
 <fullyQualifiedTypeName name="br.com.fiap.dao.impl.MotoristaDAOimpl"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="br.com.fiap.entity.Pagamento"/>
 <fullyQualifiedTypeName name="br.com.fiap.daoInterface.PagamentoDAO"/>
-<fullyQualifiedTypeName name="br.com.fiap.enumm.GeneroEnum"/>
 <fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
 <fullyQualifiedTypeName name="javax.persistence.EnumType"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="br.com.fiap.daoInterface.PassageiroDAO"/>
-<fullyQualifiedTypeName name="br.com.fiap.entity.Passageiro"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.Table"/>
@@ -44,20 +39,25 @@
 <fullyQualifiedTypeName name="javax.persistence.Temporal"/>
 <fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
-<fullyQualifiedTypeName name="br.com.fiap.entity.Corrida"/>
 <fullyQualifiedTypeName name="br.com.fiap.generics.GenericDAOimpl"/>
 <fullyQualifiedTypeName name="br.com.fiap.generics.GenericDAO"/>
-<fullyQualifiedTypeName name="br.com.fiap.daoInterface.CorridaDAO"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.FilterJoinTable"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinTable"/>
-<fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 <fullyQualifiedTypeName name="br.com.fiap.entity.Motorista"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.ManyToAny"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
-<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-<fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+<fullyQualifiedTypeName name="br.com.fiap.entity.Pagamento"/>
+<fullyQualifiedTypeName name="br.com.fiap.entity.Corrida"/>
+<fullyQualifiedTypeName name="br.com.fiap.entity.Passageiro"/>
+<fullyQualifiedTypeName name="br.com.fiap.enumm.GeneroEnum"/>
+<fullyQualifiedTypeName name="br.com.fiap.enumm.EnumFormaPagamento"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.com.fiap.daoInterface.CorridaDAO"/>
+<fullyQualifiedTypeName name="br.com.fiap.dao.impl.CorridaDAOimpl"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
 </qualifiedTypeNameHistroy>

@@ -11,6 +11,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
@@ -44,12 +46,17 @@ public class Motorista implements Serializable {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "ds_genero")
 	private GeneroEnum genero;
-
-	@ManyToMany(mappedBy = "listamotor")
-	List<Veiculo> listaVeiculo;
 	
-	@OneToMany(mappedBy = "motorista" , cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+	// Um motorista tem uma lista de corrida
+	@OneToMany(mappedBy = "motorista")
 	private List<Corrida> listacorrida;
+	
+	//MM
+	@ManyToMany(cascade= {CascadeType.PERSIST})
+	@JoinTable(name = "T_VEICULO_MOTORISTA" , joinColumns = @JoinColumn(name = "cd_motorista") , 
+						 				inverseJoinColumns = @JoinColumn(name = "cd_veiculo"))
+	private List<Veiculo> listaVeiculo;
+
 	
 	public Motorista() {
 		
@@ -63,6 +70,7 @@ public class Motorista implements Serializable {
 		this.foto = foto;
 		this.genero = genero;
 	}
+
 
 	public int getIdCarteira() {
 		return idCarteira;
@@ -103,6 +111,23 @@ public class Motorista implements Serializable {
 	public void setGenero(GeneroEnum genero) {
 		this.genero = genero;
 	}
+
+	public List<Veiculo> getListaVeiculo() {
+		return listaVeiculo;
+	}
+
+	public void setListaVeiculo(List<Veiculo> listaVeiculo) {
+		this.listaVeiculo = listaVeiculo;
+	}
+
+	public List<Corrida> getListacorrida() {
+		return listacorrida;
+	}
+
+	public void setListacorrida(List<Corrida> listacorrida) {
+		this.listacorrida = listacorrida;
+	}
+	
 	
 	
 	

@@ -1,8 +1,5 @@
 package br.com.fiap.dao.teste;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 

@@ -3,6 +3,7 @@ package br.com.fiap.entity;
 import java.io.Serializable;
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -33,7 +34,7 @@ public class Pagamento implements Serializable{
 	
 	@Column(name = "dt_pagamento" , nullable = false)
 	@Temporal(TemporalType.DATE)
-	private Calendar ValorPay;
+	private Calendar DataPay;
 	
 	@Column(name = "vl_pagamento" , nullable = false)
 	private float ValuePay;
@@ -42,20 +43,30 @@ public class Pagamento implements Serializable{
 	@Column(name = "ds_forma_pagamento" , nullable = false)
 	private EnumFormaPagamento formaPay;
 
-	@OneToOne
+	@OneToOne()
 	@JoinColumn(name="cd_corrida")
 	private Corrida corrida;
-	
-	public Pagamento() {
 		
+	public Pagamento() {
 	}
 	
 
-	public Pagamento(Calendar valorPay, float valuePay, EnumFormaPagamento formaPay) {
+	public Pagamento(Calendar dataPay, float valuePay, EnumFormaPagamento formaPay) {
 		super();
-		ValorPay = valorPay;
+		DataPay = dataPay;
 		ValuePay = valuePay;
 		this.formaPay = formaPay;
+	}
+	
+	
+
+	public Calendar getDataPay() {
+		return DataPay;
+	}
+
+
+	public void setDataPay(Calendar dataPay) {
+		DataPay = dataPay;
 	}
 
 	public int getCodigo() {
@@ -64,14 +75,6 @@ public class Pagamento implements Serializable{
 
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
-	}
-
-	public Calendar getValorPay() {
-		return ValorPay;
-	}
-
-	public void setValorPay(Calendar valorPay) {
-		ValorPay = valorPay;
 	}
 
 	public float getValuePay() {
@@ -89,6 +92,16 @@ public class Pagamento implements Serializable{
 	public void setFormaPay(EnumFormaPagamento formaPay) {
 		this.formaPay = formaPay;
 	}
+
+	public Corrida getCorrida() {
+		return corrida;
+	}
+
+	public void setCorrida(Corrida corrida) {
+		this.corrida = corrida;
+	}
+	
+
 	
 	
 }
