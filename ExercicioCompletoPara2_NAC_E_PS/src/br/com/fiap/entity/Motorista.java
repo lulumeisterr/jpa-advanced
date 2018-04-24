@@ -32,6 +32,7 @@ public class Motorista implements Serializable {
 	@Id
 	@Column(name = "nr_carteira")
 	private int idCarteira;
+	
 	@Column(name = "nm_motorista" , length = 150 , nullable = false)
 	private String nome;
 	

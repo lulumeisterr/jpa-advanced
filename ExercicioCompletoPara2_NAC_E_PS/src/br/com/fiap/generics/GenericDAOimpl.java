@@ -9,7 +9,7 @@ import br.com.fiap.exception.IdNotFoundException;
 
 public class GenericDAOimpl<Table,Value> implements GenericDAO<Table, Value>{
 	
-	private EntityManager em;
+	protected EntityManager em;
 	
 	/*
 	 * DAO QUE SERVE PARA QUALQUER CLASSE
