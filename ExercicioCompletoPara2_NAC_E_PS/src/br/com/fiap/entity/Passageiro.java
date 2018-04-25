@@ -49,8 +49,6 @@ public class Passageiro implements Serializable{
 		
 	}
 
-	
-	
 	public Passageiro(String nome, Calendar dataNascimento, GeneroEnum genero) {
 		super();
 		this.nome = nome;

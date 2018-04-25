@@ -13,4 +13,19 @@ public class PassageiroDAOimpl extends GenericDAOimpl<Passageiro, Integer> imple
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	/*
+	 * 7. Somar todos os valores de pagamentos realizados por um passageiro:
+a. Parâmetros de entrada: Código do passageiro;
+b. Retorno: Soma do valor de todos os pagamentos.
+	 * 
+	 */
+	
+	@Override
+	public double somarPagamentoPorPassageiro(int codigoPassageiro) {
+		// TODO Auto-generated method stub
+		return em.createQuery("select sum(p.ValuePay) from Pagamento p where p.corrida.codigo = :c" , 
+				Double.class).setParameter("c" , codigoPassageiro).getSingleResult();
+	}
+
 }

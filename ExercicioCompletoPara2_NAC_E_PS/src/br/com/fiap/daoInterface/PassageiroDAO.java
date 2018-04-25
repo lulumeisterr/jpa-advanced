@@ -5,5 +5,7 @@ import br.com.fiap.generics.GenericDAO;
 
 public interface PassageiroDAO extends GenericDAO<Passageiro, Integer>{
 
+	double somarPagamentoPorPassageiro(int codigoPassageiro);
+	
 }
  

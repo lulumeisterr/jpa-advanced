@@ -52,7 +52,6 @@ public class TesteRelacionamento {
 		
 		run.setMotorista(driver);
 		run.setPassageiro(person);
-		
 		run.setPagamento(pay); // Relacionamento do mappedBy
 		pay.setCorrida(run);
 		

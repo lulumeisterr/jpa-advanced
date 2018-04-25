@@ -35,4 +35,5 @@ public class MotoristaDAOimpl extends GenericDAOimpl<Motorista, Integer> impleme
 
 
 
+
 }

@@ -1,9 +1,0 @@
-package br.com.fiap.teste;
-
-public class TesteRelacionamento {
-
-	public static void main(String[] args) {
-		
-	}
-	
-}
