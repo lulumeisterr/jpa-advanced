@@ -25,7 +25,7 @@ public class CadastrandoAll {
 		
 		Calendar dt = new GregorianCalendar(2018 , Calendar.FEBRUARY , 27);
 		
-		Medico m = new Medico(1, "Lucas", EnumEspecialidade.CARDIOLOGISTA);
+		Medico m = new Medico(1, "Lucas", EnumEspecialidade.CARDIOLOGISTA , 10 , 500);
 		Paciente p = new Paciente("Wes" , dt);
 		Consulta c = new Consulta(dt , "Consultorio 02" , true);
 		
@@ -45,11 +45,5 @@ public class CadastrandoAll {
 		em.close();
 		fa.close();
 	}
-
-		
-		
-		
-		
-		
 
 }
